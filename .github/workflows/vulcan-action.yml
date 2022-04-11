@@ -1,0 +1,16 @@
+name: Vulcan Demo
+
+on:
+  workflow_dispatch:
+    push
+
+jobs:
+  vulcan:
+    runs-on: self-hosted
+
+    steps:
+      - name: Test vulcan action
+        uses: Suresoft-GLaDOS/vulcan-action@main
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}\
+          path: vulcan_target
